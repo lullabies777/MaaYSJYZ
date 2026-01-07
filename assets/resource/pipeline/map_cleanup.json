@@ -1,42 +1,42 @@
-{
-    // 东方大陆入口
-    "EastContinent": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 虚空领域入口
-    "VoidRealm": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 冰封大陆入口
-    "FrozenContinent": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 元素之地入口
-    "ElementalLand": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 迷雾大陆入口
-    "MistyContinent": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 暗影大陆入口
-    "ShadowContinent": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 军团领域入口
-    "LegionDomain": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    },
-    // 风暴群岛入口
-    "StormIsles": {
-        "action": "Custom",
-        "custom_action": "map_cleanup"
-    }
-}
+// {
+//     // 东方大陆入口
+//     "EastContinent": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 虚空领域入口
+//     "VoidRealm": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 冰封大陆入口
+//     "FrozenContinent": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 元素之地入口
+//     "ElementalLand": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 迷雾大陆入口
+//     "MistyContinent": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 暗影大陆入口
+//     "ShadowContinent": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 军团领域入口
+//     "LegionDomain": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     },
+//     // 风暴群岛入口
+//     "StormIsles": {
+//         "action": "Custom",
+//         "custom_action": "map_cleanup"
+//     }
+// }

@@ -1,0 +1,100 @@
+{
+    "FreeDungeonTask": {
+        "doc": "免费副本自动刷取 - 入口任务",
+        "next": [
+            "ClickMapEntry"
+        ]
+    },
+
+    "ClickMapEntry": {
+        "doc": "点击顶部地图入口（固定坐标 360,50）",
+        "recognition": "DirectHit",
+        "target": [360, 50, 1, 1],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "FindFreeDungeon"
+        ]
+    },
+
+    "FindFreeDungeon": {
+        "doc": "在地图中寻找带绿色标记的免费副本",
+        "recognition": "ColorMatch",
+        "lower": [57, 219, 123],
+        "upper": [57, 219, 123],
+        "count": 50,
+        "connected": true,
+        "action": "Click",
+        "target_offset": [-30, 20, 0, 0],
+        "post_delay": 1000,
+        "next": [
+            "ClickGoButton"
+        ],
+        "on_error": [
+            "CheckTaskComplete"
+        ]
+    },
+
+    "CheckTaskComplete": {
+        "doc": "二次确认是否还有免费副本",
+        "recognition": "ColorMatch",
+        "lower": [57, 219, 123],
+        "upper": [57, 219, 123],
+        "count": 50,
+        "connected": true,
+        "action": "Click",
+        "target_offset": [-30, 20, 0, 0],
+        "next": [
+            "ClickGoButton"
+        ],
+        "on_error": [
+            "TaskComplete"
+        ]
+    },
+
+    "ClickGoButton": {
+        "doc": "点击前往按钮（固定坐标 360,920）",
+        "recognition": "DirectHit",
+        "target": [360, 920, 1, 1],
+        "action": "Click",
+        "post_delay": 2000,
+        "rate_limit": 3000,
+        "timeout": 600000,
+        "next": [
+            "WaitBattleEnd"
+        ]
+    },
+
+    "WaitBattleEnd": {
+        "doc": "等待战斗结束 - 检测礼包图标重新出现",
+        "recognition": "TemplateMatch",
+        "template": "gift.png",
+        "threshold": 0.8,
+        "next": [
+            "BackToMap",
+        ]
+    },
+
+    "BackToMap": {
+        "doc": "战斗结束，重新进入地图",
+        "recognition": "DirectHit",
+        "target": [360, 50, 10, 10],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "FindFreeDungeon"
+        ]
+    },
+
+    "TaskComplete": {
+        "doc": "所有免费副本已完成",
+        "action": "DoNothing",
+        "next": []
+    },
+
+    "HandleTimeout": {
+        "doc": "战斗超时处理",
+        "action": "DoNothing",
+        "next": []
+    }
+}

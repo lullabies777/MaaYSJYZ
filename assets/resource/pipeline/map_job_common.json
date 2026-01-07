@@ -1,0 +1,47 @@
+{
+    // 通用单职业流水线入口
+    // map / job 信息来自：
+    // - interface 的 pipeline_override（use_xxx 等）
+    // - map_cleanup.action 中对 MapJobCommon 写入的 { "map": ..., "job": ... }
+    "MapJobCommon": {
+        "next": [
+            "MJ_Prepare"
+        ]
+    },
+    // 预处理（可选）：比如从配置中读 map/job，做一些通用判断
+    "MJ_Prepare": {
+        // 示例：这里可以根据 map/job 决定后续走哪个分支
+        // 也可以直接 next 到 MJ_SelectMap
+        "next": [
+            "MJ_SelectMap"
+        ]
+    },
+    // 选择 / 确认地图：
+    // - 根据 MapJobCommon.map 决定在地图选择界面点击哪个入口
+    // - OCR 名 / Action 名请根据你实际资源替换
+    "MJ_SelectMap": {
+        "recognition": "MJ_SelectMap_OCR", // TODO: 换成真实 OCR 流程
+        "action": "MJ_SelectMap_Action", // TODO: 换成真实点击/操作动作
+        "next": [
+            "MJ_EnterMapForJob"
+        ]
+    },
+    // 进入该职业的刷图起点：
+    // - 例如：切换到该角色、进副本入口等
+    "MJ_EnterMapForJob": {
+        "recognition": "MJ_EnterJobStart_OCR", // TODO: 换成真实 OCR
+        "action": "MJ_EnterJobStart_Action", // TODO: 换成真实动作
+        "next": [
+            "MJ_DoJobLoop"
+        ]
+    },
+    // 实际刷图循环的骨架：
+    // - 内部可以再拆成更多节点：战斗中、结算、再次进入等
+    "MJ_DoJobLoop": {
+        "recognition": "MJ_DoJobLoop_OCR", // TODO: 换成真实 OCR
+        "action": "MJ_DoJobLoop_Action", // TODO: 换成真实动作
+        "next": [
+            // 例如可以回到 MJ_DoJobLoop 实现循环，或跳到 MJ_Finish
+        ]
+    }
+}

@@ -6,6 +6,9 @@ from maa.toolkit import Toolkit
 import my_action
 import my_reco
 
+# 导入自定义 actions
+from custom.action import map_cleanup, select_map, select_job_character
+
 
 def main():
     Toolkit.init_option("./")

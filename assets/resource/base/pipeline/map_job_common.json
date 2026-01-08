@@ -1,0 +1,53 @@
+{
+    "MapJobCommon": {
+        "doc": "通用单职业流水线入口 - 先选择角色，再执行刷图流程",
+        "next": [
+            "SelectJobCharacter"
+        ]
+    },
+    "SelectJobCharacter": {
+        "doc": "选择职业角色 - 点击设置，识别角色，点击进入",
+        "next": [
+            "ClickSettingsButton"
+        ]
+    },
+    "ClickSettingsButton": {
+        "doc": "点击设置按钮（左上角固定坐标）",
+        "recognition": "DirectHit",
+        "target": [
+            50,
+            50,
+            1,
+            1
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "RecognizeJobCharacter"
+        ]
+    },
+    "RecognizeJobCharacter": {
+        "doc": "识别并点击对应职业角色 - 使用自定义 action",
+        "action": "Custom",
+        "custom_action": "select_job_character",
+        "post_delay": 1000,
+        "next": [
+            "ClickEnterButton"
+        ]
+    },
+    "ClickEnterButton": {
+        "doc": "点击进入按钮（固定坐标）",
+        "recognition": "DirectHit",
+        "target": [
+            360,
+            800,
+            1,
+            1
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "FreeDungeonTask"
+        ]
+    }
+}

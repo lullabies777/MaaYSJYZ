@@ -87,7 +87,7 @@ class SelectMap(CustomAction):
 
         if not map_name:
             print(f"[SelectMap] Error: map parameter not found")
-            return False
+            return CustomAction.RunResult(success=False)
 
         # 如果 pipeline_override 中没有提供坐标，使用默认坐标
         if click_x is None or click_y is None:
@@ -98,7 +98,7 @@ class SelectMap(CustomAction):
                 print(f"[SelectMap] Using default coordinates for '{map_name}'")
             else:
                 print(f"[SelectMap] Error: unknown map '{map_name}' and no coordinates provided")
-                return False
+                return CustomAction.RunResult(success=False)
         else:
             print(f"[SelectMap] Using coordinates from pipeline_override for '{map_name}'")
 
@@ -108,4 +108,4 @@ class SelectMap(CustomAction):
         click_job = context.tasker.controller.post_click(click_x, click_y)
         click_job.wait()
 
-        return True
+        return CustomAction.RunResult(success=True)

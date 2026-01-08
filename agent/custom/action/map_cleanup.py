@@ -32,7 +32,7 @@ class MapCleanup(CustomAction):
         self,
         context: Context,
         argv: CustomAction.RunArg,
-    ) -> bool:
+    ) -> CustomAction.RunResult:
         # 任务名就是 entry 名（例如 EastContinent / VoidRealm / ...）
         current_map = argv.task_name
 
@@ -49,12 +49,12 @@ class MapCleanup(CustomAction):
 
         # 逐个职业执行清理
         for job in enabled_jobs:
-            ok = self._run_one_job(context, current_map, job)
-            if not ok:
+            result = self._run_one_job(context, current_map, job, map_config)
+            if not getattr(result, "success", False):
                 print(f"[MapCleanup] job {job} failed on {current_map}")
-                return False
+                return result
 
-        return True
+        return CustomAction.RunResult(success=True)
 
     @staticmethod
     def _collect_enabled_jobs(cfg: Dict) -> List[str]:
@@ -82,7 +82,7 @@ class MapCleanup(CustomAction):
                 enabled.append(name)
         return enabled
 
-    def _run_one_job(self, context: Context, map_name: str, job_name: str) -> bool:
+    def _run_one_job(self, context: Context, map_name: str, job_name: str, map_config: Dict) -> CustomAction.RunResult:
         """
         单个职业的执行逻辑：
         - 通过 pipeline_override 将 map / job 信息写入通用子流水线 MapJobCommon
@@ -109,7 +109,7 @@ class MapCleanup(CustomAction):
                 print(f"[MapCleanup] Using default coordinates for '{map_name}'")
             else:
                 print(f"[MapCleanup] Warning: no coordinates for map '{map_name}', Exit")
-                return False
+                return CustomAction.RunResult(success=False)
                 # map_click_x = map_click_x if map_click_x is not None else 0
                 # map_click_y = map_click_y if map_click_y is not None else 0
         else:
@@ -148,6 +148,6 @@ class MapCleanup(CustomAction):
             context.run_task("MapJobCommon")
         except Exception as e:
             print(f"[MapCleanup] MapJobCommon failed for {map_name}/{job_name}: {e}")
-            return False
+            return CustomAction.RunResult(success=False)
 
-        return True
+        return CustomAction.RunResult(success=True)

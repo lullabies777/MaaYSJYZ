@@ -1,42 +1,74 @@
 {
     "EastContinent": {
-        "doc": "东方大陆入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "东方大陆入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "VoidRealm": {
-        "doc": "虚空领域入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "虚空领域入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "FrozenContinent": {
-        "doc": "冰封大陆入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "冰封大陆入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "ElementalLand": {
-        "doc": "元素之地入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "元素之地入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "MistyContinent": {
-        "doc": "迷雾大陆入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "迷雾大陆入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "ShadowContinent": {
-        "doc": "暗影大陆入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "暗影大陆入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "LegionDomain": {
-        "doc": "军团领域入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "军团领域入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     },
     "StormIsles": {
-        "doc": "风暴群岛入口 - 调用 map_cleanup action",
-        "action": "Custom",
-        "custom_action": "map_cleanup"
+        "doc": "风暴群岛入口 - 调用 MapCleanup action",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     }
 }

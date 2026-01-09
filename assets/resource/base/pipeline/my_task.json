@@ -1,14 +1,10 @@
 {
     "MyTask1": {
-        "action": "Custom",
-        "custom_action": "Screenshot"
-    },
-    "MyTask2": {},
-    "MyTask3": {},
-    "MyTask4": {
-        "recognition": "Custom",
-        "custom_recognition": "my_reco_222",
-        "action": "Custom",
-        "custom_action": "my_action_111"
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapCleanup"
+            }
+        }
     }
 }

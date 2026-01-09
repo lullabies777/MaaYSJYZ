@@ -37,8 +37,15 @@
     },
     "SelectMapByParam": {
         "doc": "根据配置中的 map 参数，点击对应的地图区域",
-        "action": "Custom",
-        "custom_action": "my_action_111",
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SelectMap",
+                "custom_action_param": {
+                    "map": "EastContinent"
+                }
+            }
+        },
         "post_delay": 1500,
         "next": [
             "FindFreeDungeon"

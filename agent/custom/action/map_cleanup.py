@@ -5,7 +5,7 @@ from maa.context import Context
 from maa.custom_action import CustomAction
 
 
-@AgentServer.custom_action("map_cleanup")
+@AgentServer.custom_action("MapCleanup")
 class MapCleanup(CustomAction):
     """
     通用地图清理动作：
@@ -14,42 +14,26 @@ class MapCleanup(CustomAction):
     - 在这里统一遍历所有勾选的职业并逐个执行清理逻辑
     """
 
-    # 地图名称到点击坐标的映射
-    # 格式: {"map_name": [x, y]}
-    # 这些坐标用于在地图选择界面点击对应的地图
-    MAP_CLICK_COORDINATES = {
-        "EastContinent": [360, 665],      # TODO: 替换为东方大陆的真实坐标
-        "VoidRealm": [360, 710],          # TODO: 替换为虚空领域的真实坐标
-        "FrozenContinent": [360, 755],    # TODO: 替换为冰封大陆的真实坐标
-        "ElementalLand": [360, 800],      # TODO: 替换为元素之地的真实坐标
-        "MistyContinent": [360, 847],     # TODO: 替换为迷雾大陆的真实坐标
-        "ShadowContinent": [360, 893],    # TODO: 替换为暗影大陆的真实坐标
-        "LegionDomain": [360, 940],       # TODO: 替换为军团领域的真实坐标
-        "StormIsles": [360, 989],         # TODO: 替换为风暴群岛的真实坐标
-    }
-
     def run(
         self,
         context: Context,
         argv: CustomAction.RunArg,
     ) -> CustomAction.RunResult:
         # 任务名就是 entry 名（例如 EastContinent / VoidRealm / ...）
-        current_map = argv.task_name
-
-        # 读取该 entry 对应的配置（pipeline_override 已经合并进 context.config）
-        # 不同项目版本里字段名可能略有差异，这里使用通用 dict 读取方式。
-        map_config: Dict = {}
-        if hasattr(context, "config") and isinstance(context.config, dict):
-            map_config = context.config.get(current_map, {}) or {}
+        current_map = argv.node_name
+        print("current_map:",current_map)
+        node_obj = context.get_node_object(current_map)
+        attach = getattr(node_obj, "attach", {}) if node_obj else {}
 
         # 收集所有已开启的职业
-        enabled_jobs = self._collect_enabled_jobs(map_config)
+        enabled_jobs = self._collect_enabled_jobs(attach)
+        print("enabled_jobs:", enabled_jobs)
 
         print(f"[MapCleanup] map={current_map}, jobs={enabled_jobs}")
 
         # 逐个职业执行清理
         for job in enabled_jobs:
-            result = self._run_one_job(context, current_map, job, map_config)
+            result = self._run_one_job(context, current_map, job)
             if not getattr(result, "success", False):
                 print(f"[MapCleanup] job {job} failed on {current_map}")
                 return result
@@ -57,7 +41,7 @@ class MapCleanup(CustomAction):
         return CustomAction.RunResult(success=True)
 
     @staticmethod
-    def _collect_enabled_jobs(cfg: Dict) -> List[str]:
+    def _collect_enabled_jobs(attach):
         """
         根据 use_xxx 布尔字段收集需要执行的职业。
         这些字段来自 interface.json 的 pipeline_override。
@@ -78,11 +62,11 @@ class MapCleanup(CustomAction):
         }
         enabled = []
         for key, name in job_keys.items():
-            if cfg.get(key, False):
+            if attach.get(key, False):
                 enabled.append(name)
         return enabled
 
-    def _run_one_job(self, context: Context, map_name: str, job_name: str, map_config: Dict) -> CustomAction.RunResult:
+    def _run_one_job(self, context: Context, map_name: str, job_name: str) -> CustomAction.RunResult:
         """
         单个职业的执行逻辑：
         - 通过 pipeline_override 将 map / job 信息写入通用子流水线 MapJobCommon
@@ -90,55 +74,31 @@ class MapCleanup(CustomAction):
         """
         print(f"[MapCleanup] dispatch job={job_name} on map={map_name} -> MapJobCommon")
 
-        # 获取该地图的点击坐标
-        # 优先从 pipeline_override 读取（允许在 interface.json 中覆盖）
-        map_click_x = None
-        map_click_y = None
-        
-        # 尝试从 pipeline_override 读取坐标覆盖
-        if isinstance(map_config, dict):
-            map_click_x = map_config.get("map_click_x")
-            map_click_y = map_config.get("map_click_y")
-        
-        # 如果 pipeline_override 中没有提供，使用默认坐标
-        if map_click_x is None or map_click_y is None:
-            default_coord = self.MAP_CLICK_COORDINATES.get(map_name)
-            if default_coord:
-                map_click_x = map_click_x if map_click_x is not None else default_coord[0]
-                map_click_y = map_click_y if map_click_y is not None else default_coord[1]
-                print(f"[MapCleanup] Using default coordinates for '{map_name}'")
-            else:
-                print(f"[MapCleanup] Warning: no coordinates for map '{map_name}', Exit")
-                return CustomAction.RunResult(success=False)
-                # map_click_x = map_click_x if map_click_x is not None else 0
-                # map_click_y = map_click_y if map_click_y is not None else 0
-        else:
-            print(f"[MapCleanup] Using coordinates from pipeline_override for '{map_name}'")
-
-        # 将当前 map / job 信息和地图坐标写入通用子流水线配置
-        # 同时也要写入 FreeDungeonTask 和 SelectMapByParam，因为 select_map action 需要从那里读取
+        # 将当前 map / job 信息和地图坐标写入通用子流水线配置（V2 范式）
+        # 使用 action.param.custom_action_param 格式传递参数
         context.override_pipeline(
             {
-                "MapJobCommon": {
-                    "map": map_name,
-                    "job": job_name,
-                },
-                "SelectJobCharacter": {
-                    "job": job_name,
-                },
                 "RecognizeJobCharacter": {
-                    "job": job_name,
-                },
-                "FreeDungeonTask": {
-                    "map": map_name,
-                    "job": job_name,
-                    "map_click_x": map_click_x,
-                    "map_click_y": map_click_y,
+                    "action": {
+                        "type": "Custom",
+                        "param": {
+                            "custom_action": "SelectJob",
+                            "custom_action_param": {
+                                "job": job_name
+                            }
+                        }
+                    }
                 },
                 "SelectMapByParam": {
-                    "map": map_name,
-                    "map_click_x": map_click_x,
-                    "map_click_y": map_click_y,
+                    "action": {
+                        "type": "Custom",
+                        "param": {
+                            "custom_action": "SelectMap",
+                            "custom_action_param": {
+                                "map": map_name
+                            }
+                        }
+                    }
                 }
             }
         )

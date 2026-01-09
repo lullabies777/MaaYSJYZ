@@ -71,7 +71,6 @@ def agent(is_dev_mode=False):
             from maa.toolkit import Toolkit
 
             import custom  # type: ignore
-            import my_action
         except ImportError as e:
             logger.error(e)
             logger.error("Failed to import modules")

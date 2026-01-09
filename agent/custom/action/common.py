@@ -19,20 +19,30 @@ def click(context: Context, x: int, y: int, w: int = 1, h: int = 1):
         random.randint(x, x + w - 1), random.randint(y, y + h - 1)
     ).wait()
 
-@AgentServer.custom_action("my_action_111")
-class MyCustomAction(CustomAction):
+
+@AgentServer.custom_action("MyAction111")
+class MyAction111(CustomAction):
 
     def run(
         self,
         context: Context,
         argv: CustomAction.RunArg,
-    ) -> bool:
+    ) -> CustomAction.RunResult:
 
-        click_job = context.tasker.controller.post_click(360, 665)
-        click_job.wait()
+        logger.info("MyAction111 is running!")
 
-        return True
-    
+        # 监听任务停止信号以提前终止任务
+        # 相当于用户按下了“停止”按钮
+        if context.tasker.stopping:
+            logger.info("Task is stopping, exiting MyAction111 early.")
+            return CustomAction.RunResult(success=False)
+
+        # 执行自定义任务
+        # ...
+
+        return CustomAction.RunResult(success=True)
+
+
 @AgentServer.custom_action("Screenshot")
 class Screenshot(CustomAction):
     """

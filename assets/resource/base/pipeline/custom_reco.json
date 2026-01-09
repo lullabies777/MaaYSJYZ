@@ -1,0 +1,7 @@
+{
+    "OCRJob": {
+        "recognition": {
+            "type": "OCR"
+        }
+    }
+}

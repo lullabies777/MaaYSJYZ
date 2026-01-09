@@ -228,28 +228,44 @@
                     "label": "使用战士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         },
                         "StormIsles": {
-                            "use_warrior": true
+                            "attach": {
+                                "use_warrior": true
+                            }
                         }
                     }
                 },
@@ -258,28 +274,44 @@
                     "label": "不使用战士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         },
                         "StormIsles": {
-                            "use_warrior": false
+                            "attach": {
+                                "use_warrior": false
+                            }
                         }
                     }
                 }
@@ -294,28 +326,44 @@
                     "label": "使用法师",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         },
                         "StormIsles": {
-                            "use_mage": true
+                            "attach": {
+                                "use_mage": true
+                            }
                         }
                     }
                 },
@@ -324,28 +372,44 @@
                     "label": "不使用法师",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         },
                         "StormIsles": {
-                            "use_mage": false
+                            "attach": {
+                                "use_mage": false
+                            }
                         }
                     }
                 }
@@ -360,28 +424,44 @@
                     "label": "使用盗贼",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         },
                         "StormIsles": {
-                            "use_rogue": true
+                            "attach": {
+                                "use_rogue": true
+                            }
                         }
                     }
                 },
@@ -390,28 +470,44 @@
                     "label": "不使用盗贼",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         },
                         "StormIsles": {
-                            "use_rogue": false
+                            "attach": {
+                                "use_rogue": false
+                            }
                         }
                     }
                 }
@@ -426,28 +522,44 @@
                     "label": "使用猎人",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         },
                         "StormIsles": {
-                            "use_hunter": true
+                            "attach": {
+                                "use_hunter": true
+                            }
                         }
                     }
                 },
@@ -456,28 +568,44 @@
                     "label": "不使用猎人",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         },
                         "StormIsles": {
-                            "use_hunter": false
+                            "attach": {
+                                "use_hunter": false
+                            }
                         }
                     }
                 }
@@ -492,28 +620,44 @@
                     "label": "使用圣骑士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         },
                         "StormIsles": {
-                            "use_paladin": true
+                            "attach": {
+                                "use_paladin": true
+                            }
                         }
                     }
                 },
@@ -522,28 +666,44 @@
                     "label": "不使用圣骑士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         },
                         "StormIsles": {
-                            "use_paladin": false
+                            "attach": {
+                                "use_paladin": false
+                            }
                         }
                     }
                 }
@@ -558,28 +718,44 @@
                     "label": "使用术士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         },
                         "StormIsles": {
-                            "use_warlock": true
+                            "attach": {
+                                "use_warlock": true
+                            }
                         }
                     }
                 },
@@ -588,28 +764,44 @@
                     "label": "不使用术士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         },
                         "StormIsles": {
-                            "use_warlock": false
+                            "attach": {
+                                "use_warlock": false
+                            }
                         }
                     }
                 }
@@ -624,28 +816,44 @@
                     "label": "使用德鲁伊",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         },
                         "StormIsles": {
-                            "use_druid": true
+                            "attach": {
+                                "use_druid": true
+                            }
                         }
                     }
                 },
@@ -654,28 +862,44 @@
                     "label": "不使用德鲁伊",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         },
                         "StormIsles": {
-                            "use_druid": false
+                            "attach": {
+                                "use_druid": false
+                            }
                         }
                     }
                 }
@@ -690,28 +914,44 @@
                     "label": "使用萨满祭祀",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         },
                         "StormIsles": {
-                            "use_shaman": true
+                            "attach": {
+                                "use_shaman": true
+                            }
                         }
                     }
                 },
@@ -720,28 +960,44 @@
                     "label": "不使用萨满祭祀",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         },
                         "StormIsles": {
-                            "use_shaman": false
+                            "attach": {
+                                "use_shaman": false
+                            }
                         }
                     }
                 }
@@ -756,28 +1012,44 @@
                     "label": "使用牧师",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         },
                         "StormIsles": {
-                            "use_priest": true
+                            "attach": {
+                                "use_priest": true
+                            }
                         }
                     }
                 },
@@ -786,28 +1058,44 @@
                     "label": "不使用牧师",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         },
                         "StormIsles": {
-                            "use_priest": false
+                            "attach": {
+                                "use_priest": false
+                            }
                         }
                     }
                 }
@@ -822,28 +1110,44 @@
                     "label": "使用死亡骑士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         },
                         "StormIsles": {
-                            "use_death_knight": true
+                            "attach": {
+                                "use_death_knight": true
+                            }
                         }
                     }
                 },
@@ -852,28 +1156,44 @@
                     "label": "不使用死亡骑士",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         },
                         "StormIsles": {
-                            "use_death_knight": false
+                            "attach": {
+                                "use_death_knight": false
+                            }
                         }
                     }
                 }
@@ -888,28 +1208,44 @@
                     "label": "使用武僧",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         },
                         "StormIsles": {
-                            "use_monk": true
+                            "attach": {
+                                "use_monk": true
+                            }
                         }
                     }
                 },
@@ -918,28 +1254,44 @@
                     "label": "不使用武僧",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         },
                         "StormIsles": {
-                            "use_monk": false
+                            "attach": {
+                                "use_monk": false
+                            }
                         }
                     }
                 }
@@ -954,28 +1306,44 @@
                     "label": "使用魔猎手",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "VoidRealm": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "FrozenContinent": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "ElementalLand": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "MistyContinent": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "ShadowContinent": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "LegionDomain": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         },
                         "StormIsles": {
-                            "use_demon_hunter": true
+                            "attach": {
+                                "use_demon_hunter": true
+                            }
                         }
                     }
                 },
@@ -984,28 +1352,44 @@
                     "label": "不使用魔猎手",
                     "pipeline_override": {
                         "EastContinent": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "VoidRealm": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "FrozenContinent": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "ElementalLand": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "MistyContinent": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "ShadowContinent": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "LegionDomain": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         },
                         "StormIsles": {
-                            "use_demon_hunter": false
+                            "attach": {
+                                "use_demon_hunter": false
+                            }
                         }
                     }
                 }

@@ -18,14 +18,14 @@ class MapCleanup(CustomAction):
     # 格式: {"map_name": [x, y]}
     # 这些坐标用于在地图选择界面点击对应的地图
     MAP_CLICK_COORDINATES = {
-        "EastContinent": [100, 200],      # TODO: 替换为东方大陆的真实坐标
-        "VoidRealm": [200, 200],          # TODO: 替换为虚空领域的真实坐标
-        "FrozenContinent": [300, 200],    # TODO: 替换为冰封大陆的真实坐标
-        "ElementalLand": [100, 300],      # TODO: 替换为元素之地的真实坐标
-        "MistyContinent": [200, 300],     # TODO: 替换为迷雾大陆的真实坐标
-        "ShadowContinent": [300, 300],    # TODO: 替换为暗影大陆的真实坐标
-        "LegionDomain": [100, 400],       # TODO: 替换为军团领域的真实坐标
-        "StormIsles": [200, 400],         # TODO: 替换为风暴群岛的真实坐标
+        "EastContinent": [360, 665],      # TODO: 替换为东方大陆的真实坐标
+        "VoidRealm": [360, 710],          # TODO: 替换为虚空领域的真实坐标
+        "FrozenContinent": [360, 755],    # TODO: 替换为冰封大陆的真实坐标
+        "ElementalLand": [360, 800],      # TODO: 替换为元素之地的真实坐标
+        "MistyContinent": [360, 847],     # TODO: 替换为迷雾大陆的真实坐标
+        "ShadowContinent": [360, 893],    # TODO: 替换为暗影大陆的真实坐标
+        "LegionDomain": [360, 940],       # TODO: 替换为军团领域的真实坐标
+        "StormIsles": [360, 989],         # TODO: 替换为风暴群岛的真实坐标
     }
 
     def run(

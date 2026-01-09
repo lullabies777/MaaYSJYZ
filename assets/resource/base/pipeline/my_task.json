@@ -1,5 +1,8 @@
 {
-    "MyTask1": {},
+    "MyTask1": {
+        "action": "Custom",
+        "custom_action": "Screenshot"
+    },
     "MyTask2": {},
     "MyTask3": {},
     "MyTask4": {

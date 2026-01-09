@@ -25,7 +25,7 @@
         "recognition": "DirectHit",
         "target": [
             360,
-            100,
+            1065,
             1,
             1
         ],
@@ -38,7 +38,7 @@
     "SelectMapByParam": {
         "doc": "根据配置中的 map 参数，点击对应的地图区域",
         "action": "Custom",
-        "custom_action": "select_map",
+        "custom_action": "my_action_111",
         "post_delay": 1500,
         "next": [
             "FindFreeDungeon"

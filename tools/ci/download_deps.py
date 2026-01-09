@@ -5,11 +5,9 @@
 自动检测当前平台并下载对应架构的wheel文件
 """
 
-import os
 import sys
 import subprocess
 import argparse
-import platform
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")  # type: ignore
@@ -52,7 +50,6 @@ def download_dependencies(deps_dir, platform_tag):
         print("错误: requirements.txt 文件不存在")
         return False
 
-    # 通用下载策略（不指定平台）
     try:
         cmd_fallback = [
             sys.executable,
@@ -84,11 +81,11 @@ def download_dependencies(deps_dir, platform_tag):
         for whl_file in whl_files:
             print(f"  {whl_file.name}")
 
-        print(f"通用策略下载完成到: {deps_path}")
+        print(f"依赖已经下载到目录: {deps_path}")
         return True
 
     except subprocess.CalledProcessError as e2:
-        print(f"通用策略也失败: {e2}")
+        print(f"依赖下载失败: {e2}")
         if e2.stdout:
             print("stdout:", e2.stdout)
         if e2.stderr:

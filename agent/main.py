@@ -109,7 +109,7 @@ def main():
     current_version = read_interface_version()
     is_dev_mode = current_version == "DEBUG"
 
-    if True:
+    if is_dev_mode:
         os.chdir(Path("./assets"))
         logger.info(f"set cwd: {os.getcwd()}")
 

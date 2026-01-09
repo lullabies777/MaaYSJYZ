@@ -48,19 +48,11 @@ class SelectMap(CustomAction):
         argv: CustomAction.RunArg,
     ) -> bool:
         map_name = None
-        click_x = None
-        click_y = None
         
         try:
             custom_action_param = json.loads(argv.custom_action_param)
             map_name = custom_action_param.get("map","")
-            # 有click_x和click_y的话 优先导入click_x和click_y
-            if "map_click_x" in custom_action_param and "map_click_y" in custom_action_param:
-                click_x = custom_action_param.get("map_click_x")
-                click_y = custom_action_param.get("map_click_y")
-            else:
-                map_name = custom_action_param.get("map")
-                click_x, click_y = self.DEFAULT_MAP_COORDINATES[map_name]
+            click_x, click_y = self.DEFAULT_MAP_COORDINATES[map_name]
                 
         except Exception as e:
             print(f"[SelectMap] Error: {e}")
